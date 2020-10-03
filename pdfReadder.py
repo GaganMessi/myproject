@@ -20,9 +20,11 @@ print(pdfReader.numPages)
 pageObj = pdfReader.getPage(1) 
 
 # extracting text from page 
-#print(pageObj.extractText())
+arr=list(pageObj.extractText())
 engine.say(pageObj.extractText())
 engine.runAndWait()
+
+print(arr)
 
 # closing the pdf file object 
 pdfFileObj.close() 
